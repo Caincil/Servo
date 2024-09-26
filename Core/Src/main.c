@@ -34,7 +34,11 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+// Define constants for PWM pulse widths for the servo
+#define SERVO_MIN_PULSE_WIDTH 1000  // 1ms pulse width (0 degrees)
+#define SERVO_MAX_PULSE_WIDTH 2000  // 2ms pulse width (180 degrees)
+#define SERVO_NEUTRAL_PULSE_WIDTH 1500 // 1.5ms pulse width (neutral position)
+#define SERVO_PERIOD 20000  // 20ms period for PWM signal
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -56,7 +60,9 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+void set_servo_position(uint16_t pulse_width);
+void auto_calibrate_servo(void);
+void move_servo_continuously(void);
 /* USER CODE END 0 */
 
 /**
@@ -91,7 +97,13 @@ int main(void)
   MX_TIM2_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-
+  // Start PWM on channel 1 of TIM2 (PA1)
+  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
+  // Step 1: Auto-calibrate the servo
+  auto_calibrate_servo();
+  // Step 2: Wait 2 seconds, then start continuous movement
+  HAL_Delay(2000);
+  move_servo_continuously();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -145,7 +157,42 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
+// Function to auto-calibrate the servo to the center (neutral) position
+void auto_calibrate_servo(void)
+{
+    // Set the servo to the neutral position (1.5ms pulse width)
+    set_servo_position(SERVO_NEUTRAL_PULSE_WIDTH);
 
+    // Allow some time for the servo to reach the neutral position
+    HAL_Delay(1000);
+}
+
+// Function to move the servo continuously counter-clockwise
+void move_servo_continuously(void)
+{
+    uint16_t current_pulse_width = SERVO_NEUTRAL_PULSE_WIDTH;
+
+    // Continuously decrease the pulse width to move counterclockwise
+    while (1)
+    {
+        current_pulse_width -= 10;  // Adjust the decrement as per speed
+
+        if (current_pulse_width < SERVO_MIN_PULSE_WIDTH)
+        {
+            current_pulse_width = SERVO_MAX_PULSE_WIDTH;  // Reset to max once it hits min
+        }
+
+        set_servo_position(current_pulse_width);
+        HAL_Delay(20);  // Wait to apply the new position (adjust delay for speed)
+    }
+}
+
+// Function to set the servo position by adjusting the PWM pulse width
+void set_servo_position(uint16_t pulse_width)
+{
+    // Set the compare value for the PWM signal (CCR register)
+    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, pulse_width);
+}
 /* USER CODE END 4 */
 
 /**
