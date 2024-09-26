@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "STM32",
+            "cwd": "${workspaceRoot}",
+            "executable": "build/${workspaceFolderBasename}.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "preLaunchTask": "Build Project",
+            // Add you svd file
+            "svdFile": "${workspaceRoot}/STM32F103xx.svd",
+            // Set you programmer and trget controller
+            "configFiles": [
+                "${workspaceRoot}/stlink.cfg",
+                "${workspaceRoot}/stm32f103.cfg",              
+            ],
+            "gdbPath": "/usr/bin/gdb-multiarch", // Use environment variable for GDB path
+            "swoConfig": {
+                "enabled": true,
+                "cpuFrequency": 8000000,
+                "swoFrequency": 2000000,
+                "source": "probe",
+                "decoders": [
+                    { "type": "console", "label": "ITM", "port": 0 }
+                ]
+            }
+        }
+    ]
+}
