@@ -22,6 +22,8 @@ CMakeFiles/Servo.elf.dir/Core/Src/main.c.obj: \
  /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h \
  /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h \
  /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h \
+ /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h \
+ /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
  /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
  /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
  /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
@@ -30,6 +32,8 @@ CMakeFiles/Servo.elf.dir/Core/Src/main.c.obj: \
  /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
  /home/caincil/Project/Servo_PWM/Servo/Core/Inc/tim.h \
  /home/caincil/Project/Servo_PWM/Servo/Core/Inc/main.h \
+ /home/caincil/Project/Servo_PWM/Servo/Core/Inc/adc.h \
+ /home/caincil/Project/Servo_PWM/Servo/Core/Inc/dma.h \
  /home/caincil/Project/Servo_PWM/Servo/Core/Inc/tim.h \
  /home/caincil/Project/Servo_PWM/Servo/Core/Inc/usart.h \
  /home/caincil/Project/Servo_PWM/Servo/Core/Inc/gpio.h

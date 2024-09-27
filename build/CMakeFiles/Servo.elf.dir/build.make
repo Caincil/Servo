@@ -69,10 +69,24 @@ include CMakeFiles/Servo.elf.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Servo.elf.dir/flags.make
 
+CMakeFiles/Servo.elf.dir/Core/Src/adc.c.obj: CMakeFiles/Servo.elf.dir/flags.make
+CMakeFiles/Servo.elf.dir/Core/Src/adc.c.obj: /home/caincil/Project/Servo_PWM/Servo/Core/Src/adc.c
+CMakeFiles/Servo.elf.dir/Core/Src/adc.c.obj: CMakeFiles/Servo.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Servo.elf.dir/Core/Src/adc.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Servo.elf.dir/Core/Src/adc.c.obj -MF CMakeFiles/Servo.elf.dir/Core/Src/adc.c.obj.d -o CMakeFiles/Servo.elf.dir/Core/Src/adc.c.obj -c /home/caincil/Project/Servo_PWM/Servo/Core/Src/adc.c
+
+CMakeFiles/Servo.elf.dir/Core/Src/adc.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Servo.elf.dir/Core/Src/adc.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/caincil/Project/Servo_PWM/Servo/Core/Src/adc.c > CMakeFiles/Servo.elf.dir/Core/Src/adc.c.i
+
+CMakeFiles/Servo.elf.dir/Core/Src/adc.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Servo.elf.dir/Core/Src/adc.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/caincil/Project/Servo_PWM/Servo/Core/Src/adc.c -o CMakeFiles/Servo.elf.dir/Core/Src/adc.c.s
+
 CMakeFiles/Servo.elf.dir/Core/Src/dma.c.obj: CMakeFiles/Servo.elf.dir/flags.make
 CMakeFiles/Servo.elf.dir/Core/Src/dma.c.obj: /home/caincil/Project/Servo_PWM/Servo/Core/Src/dma.c
 CMakeFiles/Servo.elf.dir/Core/Src/dma.c.obj: CMakeFiles/Servo.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Servo.elf.dir/Core/Src/dma.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Servo.elf.dir/Core/Src/dma.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Servo.elf.dir/Core/Src/dma.c.obj -MF CMakeFiles/Servo.elf.dir/Core/Src/dma.c.obj.d -o CMakeFiles/Servo.elf.dir/Core/Src/dma.c.obj -c /home/caincil/Project/Servo_PWM/Servo/Core/Src/dma.c
 
 CMakeFiles/Servo.elf.dir/Core/Src/dma.c.i: cmake_force
@@ -86,7 +100,7 @@ CMakeFiles/Servo.elf.dir/Core/Src/dma.c.s: cmake_force
 CMakeFiles/Servo.elf.dir/Core/Src/gpio.c.obj: CMakeFiles/Servo.elf.dir/flags.make
 CMakeFiles/Servo.elf.dir/Core/Src/gpio.c.obj: /home/caincil/Project/Servo_PWM/Servo/Core/Src/gpio.c
 CMakeFiles/Servo.elf.dir/Core/Src/gpio.c.obj: CMakeFiles/Servo.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Servo.elf.dir/Core/Src/gpio.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Servo.elf.dir/Core/Src/gpio.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Servo.elf.dir/Core/Src/gpio.c.obj -MF CMakeFiles/Servo.elf.dir/Core/Src/gpio.c.obj.d -o CMakeFiles/Servo.elf.dir/Core/Src/gpio.c.obj -c /home/caincil/Project/Servo_PWM/Servo/Core/Src/gpio.c
 
 CMakeFiles/Servo.elf.dir/Core/Src/gpio.c.i: cmake_force
@@ -100,7 +114,7 @@ CMakeFiles/Servo.elf.dir/Core/Src/gpio.c.s: cmake_force
 CMakeFiles/Servo.elf.dir/Core/Src/main.c.obj: CMakeFiles/Servo.elf.dir/flags.make
 CMakeFiles/Servo.elf.dir/Core/Src/main.c.obj: /home/caincil/Project/Servo_PWM/Servo/Core/Src/main.c
 CMakeFiles/Servo.elf.dir/Core/Src/main.c.obj: CMakeFiles/Servo.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Servo.elf.dir/Core/Src/main.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Servo.elf.dir/Core/Src/main.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Servo.elf.dir/Core/Src/main.c.obj -MF CMakeFiles/Servo.elf.dir/Core/Src/main.c.obj.d -o CMakeFiles/Servo.elf.dir/Core/Src/main.c.obj -c /home/caincil/Project/Servo_PWM/Servo/Core/Src/main.c
 
 CMakeFiles/Servo.elf.dir/Core/Src/main.c.i: cmake_force
@@ -114,7 +128,7 @@ CMakeFiles/Servo.elf.dir/Core/Src/main.c.s: cmake_force
 CMakeFiles/Servo.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj: CMakeFiles/Servo.elf.dir/flags.make
 CMakeFiles/Servo.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj: /home/caincil/Project/Servo_PWM/Servo/Core/Src/stm32f1xx_hal_msp.c
 CMakeFiles/Servo.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj: CMakeFiles/Servo.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Servo.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Servo.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Servo.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj -MF CMakeFiles/Servo.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj.d -o CMakeFiles/Servo.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj -c /home/caincil/Project/Servo_PWM/Servo/Core/Src/stm32f1xx_hal_msp.c
 
 CMakeFiles/Servo.elf.dir/Core/Src/stm32f1xx_hal_msp.c.i: cmake_force
@@ -128,7 +142,7 @@ CMakeFiles/Servo.elf.dir/Core/Src/stm32f1xx_hal_msp.c.s: cmake_force
 CMakeFiles/Servo.elf.dir/Core/Src/stm32f1xx_it.c.obj: CMakeFiles/Servo.elf.dir/flags.make
 CMakeFiles/Servo.elf.dir/Core/Src/stm32f1xx_it.c.obj: /home/caincil/Project/Servo_PWM/Servo/Core/Src/stm32f1xx_it.c
 CMakeFiles/Servo.elf.dir/Core/Src/stm32f1xx_it.c.obj: CMakeFiles/Servo.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Servo.elf.dir/Core/Src/stm32f1xx_it.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/Servo.elf.dir/Core/Src/stm32f1xx_it.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Servo.elf.dir/Core/Src/stm32f1xx_it.c.obj -MF CMakeFiles/Servo.elf.dir/Core/Src/stm32f1xx_it.c.obj.d -o CMakeFiles/Servo.elf.dir/Core/Src/stm32f1xx_it.c.obj -c /home/caincil/Project/Servo_PWM/Servo/Core/Src/stm32f1xx_it.c
 
 CMakeFiles/Servo.elf.dir/Core/Src/stm32f1xx_it.c.i: cmake_force
@@ -142,7 +156,7 @@ CMakeFiles/Servo.elf.dir/Core/Src/stm32f1xx_it.c.s: cmake_force
 CMakeFiles/Servo.elf.dir/Core/Src/syscalls.c.obj: CMakeFiles/Servo.elf.dir/flags.make
 CMakeFiles/Servo.elf.dir/Core/Src/syscalls.c.obj: /home/caincil/Project/Servo_PWM/Servo/Core/Src/syscalls.c
 CMakeFiles/Servo.elf.dir/Core/Src/syscalls.c.obj: CMakeFiles/Servo.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/Servo.elf.dir/Core/Src/syscalls.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/Servo.elf.dir/Core/Src/syscalls.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Servo.elf.dir/Core/Src/syscalls.c.obj -MF CMakeFiles/Servo.elf.dir/Core/Src/syscalls.c.obj.d -o CMakeFiles/Servo.elf.dir/Core/Src/syscalls.c.obj -c /home/caincil/Project/Servo_PWM/Servo/Core/Src/syscalls.c
 
 CMakeFiles/Servo.elf.dir/Core/Src/syscalls.c.i: cmake_force
@@ -156,7 +170,7 @@ CMakeFiles/Servo.elf.dir/Core/Src/syscalls.c.s: cmake_force
 CMakeFiles/Servo.elf.dir/Core/Src/sysmem.c.obj: CMakeFiles/Servo.elf.dir/flags.make
 CMakeFiles/Servo.elf.dir/Core/Src/sysmem.c.obj: /home/caincil/Project/Servo_PWM/Servo/Core/Src/sysmem.c
 CMakeFiles/Servo.elf.dir/Core/Src/sysmem.c.obj: CMakeFiles/Servo.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/Servo.elf.dir/Core/Src/sysmem.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/Servo.elf.dir/Core/Src/sysmem.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Servo.elf.dir/Core/Src/sysmem.c.obj -MF CMakeFiles/Servo.elf.dir/Core/Src/sysmem.c.obj.d -o CMakeFiles/Servo.elf.dir/Core/Src/sysmem.c.obj -c /home/caincil/Project/Servo_PWM/Servo/Core/Src/sysmem.c
 
 CMakeFiles/Servo.elf.dir/Core/Src/sysmem.c.i: cmake_force
@@ -170,7 +184,7 @@ CMakeFiles/Servo.elf.dir/Core/Src/sysmem.c.s: cmake_force
 CMakeFiles/Servo.elf.dir/Core/Src/system_stm32f1xx.c.obj: CMakeFiles/Servo.elf.dir/flags.make
 CMakeFiles/Servo.elf.dir/Core/Src/system_stm32f1xx.c.obj: /home/caincil/Project/Servo_PWM/Servo/Core/Src/system_stm32f1xx.c
 CMakeFiles/Servo.elf.dir/Core/Src/system_stm32f1xx.c.obj: CMakeFiles/Servo.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/Servo.elf.dir/Core/Src/system_stm32f1xx.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/Servo.elf.dir/Core/Src/system_stm32f1xx.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Servo.elf.dir/Core/Src/system_stm32f1xx.c.obj -MF CMakeFiles/Servo.elf.dir/Core/Src/system_stm32f1xx.c.obj.d -o CMakeFiles/Servo.elf.dir/Core/Src/system_stm32f1xx.c.obj -c /home/caincil/Project/Servo_PWM/Servo/Core/Src/system_stm32f1xx.c
 
 CMakeFiles/Servo.elf.dir/Core/Src/system_stm32f1xx.c.i: cmake_force
@@ -184,7 +198,7 @@ CMakeFiles/Servo.elf.dir/Core/Src/system_stm32f1xx.c.s: cmake_force
 CMakeFiles/Servo.elf.dir/Core/Src/tim.c.obj: CMakeFiles/Servo.elf.dir/flags.make
 CMakeFiles/Servo.elf.dir/Core/Src/tim.c.obj: /home/caincil/Project/Servo_PWM/Servo/Core/Src/tim.c
 CMakeFiles/Servo.elf.dir/Core/Src/tim.c.obj: CMakeFiles/Servo.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/Servo.elf.dir/Core/Src/tim.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/Servo.elf.dir/Core/Src/tim.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Servo.elf.dir/Core/Src/tim.c.obj -MF CMakeFiles/Servo.elf.dir/Core/Src/tim.c.obj.d -o CMakeFiles/Servo.elf.dir/Core/Src/tim.c.obj -c /home/caincil/Project/Servo_PWM/Servo/Core/Src/tim.c
 
 CMakeFiles/Servo.elf.dir/Core/Src/tim.c.i: cmake_force
@@ -198,7 +212,7 @@ CMakeFiles/Servo.elf.dir/Core/Src/tim.c.s: cmake_force
 CMakeFiles/Servo.elf.dir/Core/Src/usart.c.obj: CMakeFiles/Servo.elf.dir/flags.make
 CMakeFiles/Servo.elf.dir/Core/Src/usart.c.obj: /home/caincil/Project/Servo_PWM/Servo/Core/Src/usart.c
 CMakeFiles/Servo.elf.dir/Core/Src/usart.c.obj: CMakeFiles/Servo.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/Servo.elf.dir/Core/Src/usart.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/Servo.elf.dir/Core/Src/usart.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Servo.elf.dir/Core/Src/usart.c.obj -MF CMakeFiles/Servo.elf.dir/Core/Src/usart.c.obj.d -o CMakeFiles/Servo.elf.dir/Core/Src/usart.c.obj -c /home/caincil/Project/Servo_PWM/Servo/Core/Src/usart.c
 
 CMakeFiles/Servo.elf.dir/Core/Src/usart.c.i: cmake_force
@@ -212,7 +226,7 @@ CMakeFiles/Servo.elf.dir/Core/Src/usart.c.s: cmake_force
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj: CMakeFiles/Servo.elf.dir/flags.make
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj: /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj: CMakeFiles/Servo.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj -MF CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj.d -o CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj -c /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c
 
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.i: cmake_force
@@ -223,10 +237,38 @@ CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.s: cma
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c -o CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.s
 
+CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.obj: CMakeFiles/Servo.elf.dir/flags.make
+CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.obj: /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c
+CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.obj: CMakeFiles/Servo.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.obj -MF CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.obj.d -o CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.obj -c /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c
+
+CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c > CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.i
+
+CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c -o CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.s
+
+CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.obj: CMakeFiles/Servo.elf.dir/flags.make
+CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.obj: /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c
+CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.obj: CMakeFiles/Servo.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.obj -MF CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.obj.d -o CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.obj -c /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c
+
+CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c > CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.i
+
+CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c -o CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.s
+
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj: CMakeFiles/Servo.elf.dir/flags.make
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj: /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj: CMakeFiles/Servo.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj -MF CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj.d -o CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj -c /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c
 
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.i: cmake_force
@@ -240,7 +282,7 @@ CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj: CMakeFiles/Servo.elf.dir/flags.make
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj: /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj: CMakeFiles/Servo.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj -MF CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj.d -o CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj -c /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c
 
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.i: cmake_force
@@ -254,7 +296,7 @@ CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.s:
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj: CMakeFiles/Servo.elf.dir/flags.make
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj: /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj: CMakeFiles/Servo.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj -MF CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj.d -o CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj -c /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c
 
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.i: cmake_force
@@ -268,7 +310,7 @@ CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.s
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.obj: CMakeFiles/Servo.elf.dir/flags.make
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.obj: /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.obj: CMakeFiles/Servo.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.obj -MF CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.obj.d -o CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.obj -c /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c
 
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.i: cmake_force
@@ -282,7 +324,7 @@ CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.obj: CMakeFiles/Servo.elf.dir/flags.make
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.obj: /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.obj: CMakeFiles/Servo.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.obj -MF CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.obj.d -o CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.obj -c /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c
 
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.i: cmake_force
@@ -296,7 +338,7 @@ CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj: CMakeFiles/Servo.elf.dir/flags.make
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj: /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj: CMakeFiles/Servo.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj -MF CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj.d -o CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj -c /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c
 
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.i: cmake_force
@@ -310,7 +352,7 @@ CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.s
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.obj: CMakeFiles/Servo.elf.dir/flags.make
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.obj: /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.obj: CMakeFiles/Servo.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.obj -MF CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.obj.d -o CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.obj -c /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c
 
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.i: cmake_force
@@ -324,7 +366,7 @@ CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.obj: CMakeFiles/Servo.elf.dir/flags.make
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.obj: /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.obj: CMakeFiles/Servo.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.obj -MF CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.obj.d -o CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.obj -c /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c
 
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.i: cmake_force
@@ -338,7 +380,7 @@ CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.s:
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj: CMakeFiles/Servo.elf.dir/flags.make
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj: /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj: CMakeFiles/Servo.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj -MF CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj.d -o CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj -c /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c
 
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.i: cmake_force
@@ -352,7 +394,7 @@ CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.s:
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj: CMakeFiles/Servo.elf.dir/flags.make
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj: /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj: CMakeFiles/Servo.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj -MF CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj.d -o CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj -c /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c
 
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.i: cmake_force
@@ -366,7 +408,7 @@ CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj: CMakeFiles/Servo.elf.dir/flags.make
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj: /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj: CMakeFiles/Servo.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj -MF CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj.d -o CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj -c /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c
 
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.i: cmake_force
@@ -380,7 +422,7 @@ CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.s:
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj: CMakeFiles/Servo.elf.dir/flags.make
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj: /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj: CMakeFiles/Servo.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj -MF CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj.d -o CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj -c /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c
 
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.i: cmake_force
@@ -394,7 +436,7 @@ CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj: CMakeFiles/Servo.elf.dir/flags.make
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj: /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj: CMakeFiles/Servo.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj -MF CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj.d -o CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj -c /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c
 
 CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.i: cmake_force
@@ -407,7 +449,7 @@ CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.s
 
 CMakeFiles/Servo.elf.dir/startup_stm32f103xb.s.obj: CMakeFiles/Servo.elf.dir/flags.make
 CMakeFiles/Servo.elf.dir/startup_stm32f103xb.s.obj: /home/caincil/Project/Servo_PWM/Servo/startup_stm32f103xb.s
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building ASM object CMakeFiles/Servo.elf.dir/startup_stm32f103xb.s.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building ASM object CMakeFiles/Servo.elf.dir/startup_stm32f103xb.s.obj"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/Servo.elf.dir/startup_stm32f103xb.s.obj -c /home/caincil/Project/Servo_PWM/Servo/startup_stm32f103xb.s
 
 CMakeFiles/Servo.elf.dir/startup_stm32f103xb.s.i: cmake_force
@@ -420,6 +462,7 @@ CMakeFiles/Servo.elf.dir/startup_stm32f103xb.s.s: cmake_force
 
 # Object files for target Servo.elf
 Servo_elf_OBJECTS = \
+"CMakeFiles/Servo.elf.dir/Core/Src/adc.c.obj" \
 "CMakeFiles/Servo.elf.dir/Core/Src/dma.c.obj" \
 "CMakeFiles/Servo.elf.dir/Core/Src/gpio.c.obj" \
 "CMakeFiles/Servo.elf.dir/Core/Src/main.c.obj" \
@@ -431,6 +474,8 @@ Servo_elf_OBJECTS = \
 "CMakeFiles/Servo.elf.dir/Core/Src/tim.c.obj" \
 "CMakeFiles/Servo.elf.dir/Core/Src/usart.c.obj" \
 "CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj" \
+"CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.obj" \
+"CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.obj" \
 "CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj" \
 "CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj" \
 "CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj" \
@@ -449,6 +494,7 @@ Servo_elf_OBJECTS = \
 # External object files for target Servo.elf
 Servo_elf_EXTERNAL_OBJECTS =
 
+Servo.elf: CMakeFiles/Servo.elf.dir/Core/Src/adc.c.obj
 Servo.elf: CMakeFiles/Servo.elf.dir/Core/Src/dma.c.obj
 Servo.elf: CMakeFiles/Servo.elf.dir/Core/Src/gpio.c.obj
 Servo.elf: CMakeFiles/Servo.elf.dir/Core/Src/main.c.obj
@@ -460,6 +506,8 @@ Servo.elf: CMakeFiles/Servo.elf.dir/Core/Src/system_stm32f1xx.c.obj
 Servo.elf: CMakeFiles/Servo.elf.dir/Core/Src/tim.c.obj
 Servo.elf: CMakeFiles/Servo.elf.dir/Core/Src/usart.c.obj
 Servo.elf: CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
+Servo.elf: CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.obj
+Servo.elf: CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.obj
 Servo.elf: CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
 Servo.elf: CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj
 Servo.elf: CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj
@@ -476,7 +524,7 @@ Servo.elf: CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_h
 Servo.elf: CMakeFiles/Servo.elf.dir/startup_stm32f103xb.s.obj
 Servo.elf: CMakeFiles/Servo.elf.dir/build.make
 Servo.elf: CMakeFiles/Servo.elf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Linking C executable Servo.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/caincil/Project/Servo_PWM/Servo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Linking C executable Servo.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Servo.elf.dir/link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Building /home/caincil/Project/Servo_PWM/Servo/build/Servo.hex"
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "	Building /home/caincil/Project/Servo_PWM/Servo/build/Servo.bin"

@@ -29,6 +29,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/caincil/Project/Servo_PWM/Servo/Core/Src/adc.c" "CMakeFiles/Servo.elf.dir/Core/Src/adc.c.obj" "gcc" "CMakeFiles/Servo.elf.dir/Core/Src/adc.c.obj.d"
   "/home/caincil/Project/Servo_PWM/Servo/Core/Src/dma.c" "CMakeFiles/Servo.elf.dir/Core/Src/dma.c.obj" "gcc" "CMakeFiles/Servo.elf.dir/Core/Src/dma.c.obj.d"
   "/home/caincil/Project/Servo_PWM/Servo/Core/Src/gpio.c" "CMakeFiles/Servo.elf.dir/Core/Src/gpio.c.obj" "gcc" "CMakeFiles/Servo.elf.dir/Core/Src/gpio.c.obj.d"
   "/home/caincil/Project/Servo_PWM/Servo/Core/Src/main.c" "CMakeFiles/Servo.elf.dir/Core/Src/main.c.obj" "gcc" "CMakeFiles/Servo.elf.dir/Core/Src/main.c.obj.d"
@@ -40,6 +41,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/caincil/Project/Servo_PWM/Servo/Core/Src/tim.c" "CMakeFiles/Servo.elf.dir/Core/Src/tim.c.obj" "gcc" "CMakeFiles/Servo.elf.dir/Core/Src/tim.c.obj.d"
   "/home/caincil/Project/Servo_PWM/Servo/Core/Src/usart.c" "CMakeFiles/Servo.elf.dir/Core/Src/usart.c.obj" "gcc" "CMakeFiles/Servo.elf.dir/Core/Src/usart.c.obj.d"
   "/home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c" "CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj" "gcc" "CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj.d"
+  "/home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c" "CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.obj" "gcc" "CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.obj.d"
+  "/home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c" "CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.obj" "gcc" "CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.obj.d"
   "/home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c" "CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj" "gcc" "CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj.d"
   "/home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c" "CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj" "gcc" "CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj.d"
   "/home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c" "CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj" "gcc" "CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj.d"

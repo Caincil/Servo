@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Servo.elf.dir/Core/Src/adc.c.obj"
+  "CMakeFiles/Servo.elf.dir/Core/Src/adc.c.obj.d"
   "CMakeFiles/Servo.elf.dir/Core/Src/dma.c.obj"
   "CMakeFiles/Servo.elf.dir/Core/Src/dma.c.obj.d"
   "CMakeFiles/Servo.elf.dir/Core/Src/gpio.c.obj"
@@ -21,6 +23,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/Servo.elf.dir/Core/Src/usart.c.obj.d"
   "CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj"
   "CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj.d"
+  "CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.obj"
+  "CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.obj.d"
+  "CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.obj"
+  "CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.obj.d"
   "CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj"
   "CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj.d"
   "CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj"

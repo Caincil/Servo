@@ -18,6 +18,8 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "adc.h"
+#include "dma.h"
 #include "tim.h"
 #include "usart.h"
 #include "gpio.h"
@@ -36,8 +38,8 @@
 /* USER CODE BEGIN PD */
 
 // Define constants for PWM pulse widths for the servo
- #define SERVO_MIN_PULSE_WIDTH 	800 // 1ms pulse width (0 degrees)
- #define SERVO_MAX_PULSE_WIDTH 2200  // 2ms pulse width (180 degrees)
+ #define SERVO_MIN_PULSE_WIDTH 	1000 // 1ms pulse width (0 degrees)
+ #define SERVO_MAX_PULSE_WIDTH 2000  // 2ms pulse width (180 degrees)
  #define SERVO_NEUTRAL_PULSE_WIDTH 1500 // 1.5ms pulse width (neutral position)
  #define SERVO_PERIOD 20000  // 20ms period for PWM signal 
 
@@ -63,8 +65,12 @@ void SystemClock_Config(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+// void set_servo_position(uint16_t pulse_width);
+// void move_servo_continuously(void);
+
+uint16_t map(uint16_t value, uint16_t in_min, uint16_t in_max, uint16_t out_min, uint16_t out_max);
 void set_servo_position(uint16_t pulse_width);
-void move_servo_continuously(void);
+uint16_t read_potentiometer(void);
 
 /* USER CODE END 0 */
 
@@ -97,15 +103,17 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_TIM2_Init();
   MX_USART2_UART_Init();
+  MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
 
   // Start PWM on channel 1 of TIM2 (PA0)
   HAL_TIM_PWM_Start (&htim2, TIM_CHANNEL_1);
-  // Step 1: Auto-calibrate the servo
-  // auto_calibrate_servo();
-  move_servo_continuously();
+  HAL_ADC_Start (&hadc1);
+
+  // move_servo_continuously();
 
   /* USER CODE END 2 */
 
@@ -114,7 +122,16 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-  
+        // Read the potentiometer value
+        uint16_t pot_value = read_potentiometer();
+
+        // Map the potentiometer value (0-4095) to the servo pulse width (1000-2000)
+        uint16_t servo_pulse_width = map(pot_value, 0, 4095, SERVO_MIN_PULSE_WIDTH, SERVO_MAX_PULSE_WIDTH);
+
+        // Set the servo position based on the mapped pulse width
+        set_servo_position(servo_pulse_width);
+
+        HAL_Delay(10);  // Small delay for stability
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -128,6 +145,7 @@ void SystemClock_Config(void)
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+  RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
 
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
@@ -157,21 +175,40 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_ADC;
+  PeriphClkInit.AdcClockSelection = RCC_ADCPCLK2_DIV6;
+  if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
+  {
+    Error_Handler();
+  }
 }
 
 /* USER CODE BEGIN 4 */
-/* Function to auto-calibrate the servo to the center (neutral) position
-void auto_calibrate_servo(void)
-{
-    // Set the servo to the neutral position (1.5ms pulse width)
-    set_servo_position(SERVO_NEUTRAL_PULSE_WIDTH);
 
-    // Allow some time for the servo to reach the neutral position
-    HAL_Delay(1000);
-}*/
+
+// Function to map the potentiometer ADC value to servo pulse width
+uint16_t map(uint16_t value, uint16_t in_min, uint16_t in_max, uint16_t out_min, uint16_t out_max)
+{
+    return (value - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+}
+
+
+// Function to set the PWM duty cycle for the servo (servo position)
+void set_servo_position(uint16_t pulse_width)
+{
+    // Set the PWM compare value (CCR) to control the pulse width
+    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, pulse_width);
+}
+
+// Function to read the potentiometer value using ADC
+uint16_t read_potentiometer(void)
+{
+    HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);  // Wait for ADC conversion
+    return HAL_ADC_GetValue(&hadc1);  // Get ADC value (0-4095)
+}
 
 // Function to move the servo continuously counter-clockwise
-void move_servo_continuously(void)
+/* void move_servo_continuously(void)
 {
     uint16_t current_pulse_width = SERVO_MAX_PULSE_WIDTH;
 
@@ -196,7 +233,7 @@ void set_servo_position(uint16_t pulse_width)
 {
     // Set the compare value for the PWM signal (CCR register)
     __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, pulse_width);
-}
+} */
 
 /* USER CODE END 4 */
 
