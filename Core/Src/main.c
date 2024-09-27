@@ -36,8 +36,8 @@
 /* USER CODE BEGIN PD */
 
 // Define constants for PWM pulse widths for the servo
- #define SERVO_MIN_PULSE_WIDTH 1000  // 1ms pulse width (0 degrees)
- #define SERVO_MAX_PULSE_WIDTH 2000  // 2ms pulse width (180 degrees)
+ #define SERVO_MIN_PULSE_WIDTH 	800 // 1ms pulse width (0 degrees)
+ #define SERVO_MAX_PULSE_WIDTH 2200  // 2ms pulse width (180 degrees)
  #define SERVO_NEUTRAL_PULSE_WIDTH 1500 // 1.5ms pulse width (neutral position)
  #define SERVO_PERIOD 20000  // 20ms period for PWM signal 
 
@@ -173,7 +173,7 @@ void auto_calibrate_servo(void)
 // Function to move the servo continuously counter-clockwise
 void move_servo_continuously(void)
 {
-    uint16_t current_pulse_width = SERVO_NEUTRAL_PULSE_WIDTH;
+    uint16_t current_pulse_width = SERVO_MAX_PULSE_WIDTH;
 
     // Continuously decrease the pulse width to move counterclockwise
     while (1)
@@ -187,7 +187,7 @@ void move_servo_continuously(void)
         }
 
         set_servo_position(current_pulse_width);
-        HAL_Delay(20);  // Wait to apply the new position (adjust delay for speed)
+        HAL_Delay(10);  // Wait to apply the new position (adjust delay for speed)
     }
 }
 
