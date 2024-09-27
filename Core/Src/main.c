@@ -41,7 +41,9 @@
  #define SERVO_MIN_PULSE_WIDTH 	1000 // 1ms pulse width (0 degrees)
  #define SERVO_MAX_PULSE_WIDTH 2000  // 2ms pulse width (180 degrees)
  #define SERVO_NEUTRAL_PULSE_WIDTH 1500 // 1.5ms pulse width (neutral position)
- #define SERVO_PERIOD 20000  // 20ms period for PWM signal 
+ #define SERVO_PERIOD 20000  // 20ms period for PWM signal
+ #define FILTER_WINDOW_SIZE 3        // Size of the moving average window
+ 
 
 /* USER CODE END PD */
 
@@ -71,6 +73,11 @@ void SystemClock_Config(void);
 uint16_t map(uint16_t value, uint16_t in_min, uint16_t in_max, uint16_t out_min, uint16_t out_max);
 void set_servo_position(uint16_t pulse_width);
 uint16_t read_potentiometer(void);
+
+uint16_t moving_average_filter(uint16_t new_value);
+uint16_t adc_buffer[FILTER_WINDOW_SIZE] = {0};  // Buffer to store ADC readings
+uint8_t buffer_index = 0;                       // Index to keep track of current sample
+
 
 /* USER CODE END 0 */
 
@@ -125,8 +132,11 @@ int main(void)
         // Read the potentiometer value
         uint16_t pot_value = read_potentiometer();
 
+        // Apply moving average filter to smooth the ADC reading
+        uint16_t filtered_value = moving_average_filter(pot_value);
+
         // Map the potentiometer value (0-4095) to the servo pulse width (1000-2000)
-        uint16_t servo_pulse_width = map(pot_value, 0, 4095, SERVO_MIN_PULSE_WIDTH, SERVO_MAX_PULSE_WIDTH);
+        uint16_t servo_pulse_width = map(filtered_value, 0, 4095, SERVO_MIN_PULSE_WIDTH, SERVO_MAX_PULSE_WIDTH);
 
         // Set the servo position based on the mapped pulse width
         set_servo_position(servo_pulse_width);
@@ -207,33 +217,24 @@ uint16_t read_potentiometer(void)
     return HAL_ADC_GetValue(&hadc1);  // Get ADC value (0-4095)
 }
 
-// Function to move the servo continuously counter-clockwise
-/* void move_servo_continuously(void)
+// Function to implement a moving average filter
+uint16_t moving_average_filter(uint16_t new_value)
 {
-    uint16_t current_pulse_width = SERVO_MAX_PULSE_WIDTH;
+    static uint32_t sum = 0;  // Keep track of the sum of the buffer values
 
-    // Continuously decrease the pulse width to move counterclockwise
-    while (1)
-    {
-        current_pulse_width -= 20;  // Adjust the decrement as per speed
+    // Subtract the oldest value from the sum
+    sum -= adc_buffer[buffer_index];
 
-        if (current_pulse_width < SERVO_MIN_PULSE_WIDTH)
-        {
-          HAL_Delay(1000);
-            current_pulse_width = SERVO_MAX_PULSE_WIDTH;  // Reset to max once it hits min
-        }
+    // Add the new value to the buffer and to the sum
+    adc_buffer[buffer_index] = new_value;
+    sum += new_value;
 
-        set_servo_position(current_pulse_width);
-        HAL_Delay(10);  // Wait to apply the new position (adjust delay for speed)
-    }
+    // Increment the buffer index and wrap around if necessary
+    buffer_index = (buffer_index + 1) % FILTER_WINDOW_SIZE;
+
+    // Return the average of the buffer values
+    return (uint16_t)(sum / FILTER_WINDOW_SIZE);
 }
-
-// Function to set the servo position by adjusting the PWM pulse width
-void set_servo_position(uint16_t pulse_width)
-{
-    // Set the compare value for the PWM signal (CCR register)
-    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, pulse_width);
-} */
 
 /* USER CODE END 4 */
 
