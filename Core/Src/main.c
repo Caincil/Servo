@@ -34,11 +34,13 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+
 // Define constants for PWM pulse widths for the servo
-#define SERVO_MIN_PULSE_WIDTH 1000  // 1ms pulse width (0 degrees)
-#define SERVO_MAX_PULSE_WIDTH 2000  // 2ms pulse width (180 degrees)
-#define SERVO_NEUTRAL_PULSE_WIDTH 1500 // 1.5ms pulse width (neutral position)
-#define SERVO_PERIOD 20000  // 20ms period for PWM signal
+ #define SERVO_MIN_PULSE_WIDTH 1000  // 1ms pulse width (0 degrees)
+ #define SERVO_MAX_PULSE_WIDTH 2000  // 2ms pulse width (180 degrees)
+ #define SERVO_NEUTRAL_PULSE_WIDTH 1500 // 1.5ms pulse width (neutral position)
+ #define SERVO_PERIOD 20000  // 20ms period for PWM signal 
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -60,9 +62,11 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
 void set_servo_position(uint16_t pulse_width);
 void auto_calibrate_servo(void);
 void move_servo_continuously(void);
+
 /* USER CODE END 0 */
 
 /**
@@ -97,13 +101,13 @@ int main(void)
   MX_TIM2_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-  // Start PWM on channel 1 of TIM2 (PA1)
-  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
+
+  // Start PWM on channel 1 of TIM2 (PA0)
+  HAL_TIM_PWM_Start (&htim2, TIM_CHANNEL_1);
   // Step 1: Auto-calibrate the servo
-  auto_calibrate_servo();
-  // Step 2: Wait 2 seconds, then start continuous movement
-  HAL_Delay(2000);
+  // auto_calibrate_servo();
   move_servo_continuously();
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -111,7 +115,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+  
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -130,7 +134,7 @@ void SystemClock_Config(void)
   * in the RCC_OscInitTypeDef structure.
   */
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
-  RCC_OscInitStruct.HSEState = RCC_HSE_BYPASS;
+  RCC_OscInitStruct.HSEState = RCC_HSE_ON;
   RCC_OscInitStruct.HSEPredivValue = RCC_HSE_PREDIV_DIV1;
   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
@@ -157,7 +161,7 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-// Function to auto-calibrate the servo to the center (neutral) position
+/* Function to auto-calibrate the servo to the center (neutral) position
 void auto_calibrate_servo(void)
 {
     // Set the servo to the neutral position (1.5ms pulse width)
@@ -165,7 +169,7 @@ void auto_calibrate_servo(void)
 
     // Allow some time for the servo to reach the neutral position
     HAL_Delay(1000);
-}
+}*/
 
 // Function to move the servo continuously counter-clockwise
 void move_servo_continuously(void)
@@ -175,10 +179,11 @@ void move_servo_continuously(void)
     // Continuously decrease the pulse width to move counterclockwise
     while (1)
     {
-        current_pulse_width -= 10;  // Adjust the decrement as per speed
+        current_pulse_width -= 20;  // Adjust the decrement as per speed
 
         if (current_pulse_width < SERVO_MIN_PULSE_WIDTH)
         {
+          HAL_Delay(1000);
             current_pulse_width = SERVO_MAX_PULSE_WIDTH;  // Reset to max once it hits min
         }
 
@@ -191,8 +196,9 @@ void move_servo_continuously(void)
 void set_servo_position(uint16_t pulse_width)
 {
     // Set the compare value for the PWM signal (CCR register)
-    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, pulse_width);
+    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, pulse_width);
 }
+
 /* USER CODE END 4 */
 
 /**

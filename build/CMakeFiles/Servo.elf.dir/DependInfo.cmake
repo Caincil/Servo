@@ -29,6 +29,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/caincil/Project/Servo_PWM/Servo/Core/Src/dma.c" "CMakeFiles/Servo.elf.dir/Core/Src/dma.c.obj" "gcc" "CMakeFiles/Servo.elf.dir/Core/Src/dma.c.obj.d"
   "/home/caincil/Project/Servo_PWM/Servo/Core/Src/gpio.c" "CMakeFiles/Servo.elf.dir/Core/Src/gpio.c.obj" "gcc" "CMakeFiles/Servo.elf.dir/Core/Src/gpio.c.obj.d"
   "/home/caincil/Project/Servo_PWM/Servo/Core/Src/main.c" "CMakeFiles/Servo.elf.dir/Core/Src/main.c.obj" "gcc" "CMakeFiles/Servo.elf.dir/Core/Src/main.c.obj.d"
   "/home/caincil/Project/Servo_PWM/Servo/Core/Src/stm32f1xx_hal_msp.c" "CMakeFiles/Servo.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj" "gcc" "CMakeFiles/Servo.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj.d"
