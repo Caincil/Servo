@@ -64,7 +64,6 @@ void SystemClock_Config(void);
 /* USER CODE BEGIN 0 */
 
 void set_servo_position(uint16_t pulse_width);
-void auto_calibrate_servo(void);
 void move_servo_continuously(void);
 
 /* USER CODE END 0 */
