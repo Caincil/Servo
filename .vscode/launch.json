@@ -7,7 +7,7 @@
             "executable": "build/${workspaceFolderBasename}.elf",
             "request": "launch",
             "type": "cortex-debug",
-            "servertype": "openocd",
+            "servertype": "openocd",    
             "preLaunchTask": "Build Project",
             // Add you svd file
             "svdFile": "${workspaceRoot}/STM32F103xx.svd",

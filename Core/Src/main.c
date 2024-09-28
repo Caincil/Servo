@@ -23,6 +23,7 @@
 #include "tim.h"
 #include "usart.h"
 #include "gpio.h"
+#include <stdio.h>
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -38,8 +39,8 @@
 /* USER CODE BEGIN PD */
 
 // Define constants for PWM pulse widths for the servo
- #define SERVO_MIN_PULSE_WIDTH 	1000 // 1ms pulse width (0 degrees)
- #define SERVO_MAX_PULSE_WIDTH 2000  // 2ms pulse width (180 degrees)
+ #define SERVO_MIN_PULSE_WIDTH 	1000 // 1ms pulse width (-60 degrees)
+ #define SERVO_MAX_PULSE_WIDTH 2000  // 2ms pulse width (+60 degrees)
  #define SERVO_NEUTRAL_PULSE_WIDTH 1500 // 1.5ms pulse width (neutral position)
  #define SERVO_PERIOD 20000  // 20ms period for PWM signal
  #define FILTER_WINDOW_SIZE 3        // Size of the moving average window
@@ -67,9 +68,6 @@ void SystemClock_Config(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-// void set_servo_position(uint16_t pulse_width);
-// void move_servo_continuously(void);
-
 uint16_t map(uint16_t value, uint16_t in_min, uint16_t in_max, uint16_t out_min, uint16_t out_max);
 void set_servo_position(uint16_t pulse_width);
 uint16_t read_potentiometer(void);
@@ -78,6 +76,9 @@ uint16_t moving_average_filter(uint16_t new_value);
 uint16_t adc_buffer[FILTER_WINDOW_SIZE] = {0};  // Buffer to store ADC readings
 uint8_t buffer_index = 0;                       // Index to keep track of current sample
 
+
+uint32_t adc_to_millivolts(uint16_t adc_value);
+void send_voltage_over_uart(uint32_t voltage);
 
 /* USER CODE END 0 */
 
@@ -120,7 +121,6 @@ int main(void)
   HAL_TIM_PWM_Start (&htim2, TIM_CHANNEL_1);
   HAL_ADC_Start (&hadc1);
 
-  // move_servo_continuously();
 
   /* USER CODE END 2 */
 
@@ -129,6 +129,11 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
+
+    char message[] = "Hello from Nucleo!\r\n";
+    HAL_UART_Transmit(&huart2, (uint8_t *)message, strlen(message), 1000);  // Use 1 second timeout
+    HAL_Delay(1000);  // Send message every second
+    /*
         // Read the potentiometer value
         uint16_t pot_value = read_potentiometer();
 
@@ -141,7 +146,23 @@ int main(void)
         // Set the servo position based on the mapped pulse width
         set_servo_position(servo_pulse_width);
 
+         // Every second, calculate the voltage and send it over UART
+        static uint32_t last_time = 0;
+        if (HAL_GetTick() - last_time >= 1000)
+        {
+          last_time = HAL_GetTick();
+
+            // Convert the filtered ADC value to millivolts
+          uint32_t voltage = adc_to_millivolts(filtered_value);
+
+            // Send the voltage over UART
+          send_voltage_over_uart(voltage);
+
+            
+        }
+      
         HAL_Delay(10);  // Small delay for stability
+        */
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -235,6 +256,25 @@ uint16_t moving_average_filter(uint16_t new_value)
     // Return the average of the buffer values
     return (uint16_t)(sum / FILTER_WINDOW_SIZE);
 }
+
+// Function to convert ADC value to millivolts
+uint32_t adc_to_millivolts(uint16_t adc_value)
+{
+    // Vref is assumed to be 3.3V (3300 mV), and ADC resolution is 12 bits (0-4095)
+    return (uint32_t)(adc_value * 3300 / 4095);
+}
+
+// Function to send voltage over UART in millivolts
+void send_voltage_over_uart(uint32_t voltage)
+{
+    char buffer[50];
+    int len = snprintf(buffer, sizeof(buffer), "ADC Voltage: %lu mV\r\n", voltage);
+
+    // Send the formatted string over UART
+    HAL_UART_Transmit(&huart2, (uint8_t *)buffer, len, HAL_MAX_DELAY);
+}
+
+
 
 /* USER CODE END 4 */
 
