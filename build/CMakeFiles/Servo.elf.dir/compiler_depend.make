@@ -139,11 +139,16 @@ CMakeFiles/Servo.elf.dir/Core/Src/main.c.obj: /home/caincil/Project/Servo_PWM/Se
   /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
   /usr/include/newlib/_ansi.h \
   /usr/include/newlib/_newlib_version.h \
+  /usr/include/newlib/inttypes.h \
   /usr/include/newlib/machine/_default_types.h \
   /usr/include/newlib/machine/_types.h \
   /usr/include/newlib/machine/ieeefp.h \
   /usr/include/newlib/newlib.h \
   /usr/include/newlib/stdio.h \
+  /usr/include/newlib/string.h \
+  /usr/include/newlib/strings.h \
+  /usr/include/newlib/sys/_intsup.h \
+  /usr/include/newlib/sys/_locale.h \
   /usr/include/newlib/sys/_types.h \
   /usr/include/newlib/sys/cdefs.h \
   /usr/include/newlib/sys/config.h \
@@ -151,6 +156,7 @@ CMakeFiles/Servo.elf.dir/Core/Src/main.c.obj: /home/caincil/Project/Servo_PWM/Se
   /usr/include/newlib/sys/lock.h \
   /usr/include/newlib/sys/reent.h \
   /usr/include/newlib/sys/stdio.h \
+  /usr/include/newlib/sys/string.h \
   /usr/lib/gcc/arm-none-eabi/13.2.1/include/stdarg.h \
   /usr/lib/gcc/arm-none-eabi/13.2.1/include/stddef.h \
   /usr/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h
@@ -880,8 +886,6 @@ CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.o
   /usr/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h
 
 
-/home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c:
-
 /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c:
 
 /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c:
@@ -924,8 +928,6 @@ CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.o
 
 /usr/include/newlib/sys/_stdint.h:
 
-/usr/include/newlib/sys/_locale.h:
-
 /usr/include/newlib/stdlib.h:
 
 /usr/include/newlib/signal.h:
@@ -945,6 +947,12 @@ CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.o
 /home/caincil/Project/Servo_PWM/Servo/Core/Src/sysmem.c:
 
 /usr/include/newlib/machine/_time.h:
+
+/home/caincil/Project/Servo_PWM/Servo/Core/Src/syscalls.c:
+
+/home/caincil/Project/Servo_PWM/Servo/Core/Inc/stm32f1xx_it.h:
+
+/usr/lib/gcc/arm-none-eabi/13.2.1/include/stdarg.h:
 
 /home/caincil/Project/Servo_PWM/Servo/Core/Inc/gpio.h:
 
@@ -978,6 +986,10 @@ CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.o
 
 /home/caincil/Project/Servo_PWM/Servo/Core/Src/adc.c:
 
+/usr/include/newlib/alloca.h:
+
+/home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:
+
 /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h:
 
 /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c:
@@ -988,7 +1000,13 @@ CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.o
 
 /home/caincil/Project/Servo_PWM/Servo/Core/Inc/main.h:
 
-/home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
+/home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c:
+
+/usr/include/newlib/sys/stat.h:
+
+/home/caincil/Project/Servo_PWM/Servo/Core/Src/stm32f1xx_it.c:
+
+/usr/include/newlib/sys/string.h:
 
 /usr/include/newlib/_newlib_version.h:
 
@@ -1022,6 +1040,12 @@ CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.o
 
 /home/caincil/Project/Servo_PWM/Servo/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:
 
+/home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c:
+
+/home/caincil/Project/Servo_PWM/Servo/Core/Src/stm32f1xx_hal_msp.c:
+
+/home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h:
+
 /usr/include/newlib/errno.h:
 
 /home/caincil/Project/Servo_PWM/Servo/Drivers/CMSIS/Include/core_cm3.h:
@@ -1044,23 +1068,33 @@ CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.o
 
 /usr/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h:
 
+/home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
+
+/usr/include/newlib/string.h:
+
 /home/caincil/Project/Servo_PWM/Servo/Core/Src/dma.c:
 
 /home/caincil/Project/Servo_PWM/Servo/Core/Inc/dma.h:
 
-/home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:
-
-/usr/include/newlib/alloca.h:
-
 /home/caincil/Project/Servo_PWM/Servo/Core/Inc/usart.h:
 
 /usr/include/newlib/_ansi.h:
+
+/usr/include/newlib/inttypes.h:
 
 /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h:
 
 /usr/include/newlib/machine/ieeefp.h:
 
 /usr/include/newlib/newlib.h:
+
+/usr/include/newlib/strings.h:
+
+/home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c:
+
+/usr/include/newlib/sys/_intsup.h:
+
+/usr/include/newlib/sys/_locale.h:
 
 /usr/include/newlib/sys/cdefs.h:
 
@@ -1069,21 +1103,3 @@ CMakeFiles/Servo.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.o
 /home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:
 
 /usr/include/newlib/sys/stdio.h:
-
-/usr/lib/gcc/arm-none-eabi/13.2.1/include/stdarg.h:
-
-/home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c:
-
-/home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h:
-
-/home/caincil/Project/Servo_PWM/Servo/Core/Src/stm32f1xx_hal_msp.c:
-
-/home/caincil/Project/Servo_PWM/Servo/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c:
-
-/usr/include/newlib/sys/stat.h:
-
-/home/caincil/Project/Servo_PWM/Servo/Core/Src/stm32f1xx_it.c:
-
-/home/caincil/Project/Servo_PWM/Servo/Core/Inc/stm32f1xx_it.h:
-
-/home/caincil/Project/Servo_PWM/Servo/Core/Src/syscalls.c:

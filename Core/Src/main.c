@@ -24,6 +24,8 @@
 #include "usart.h"
 #include "gpio.h"
 #include <stdio.h>
+#include <inttypes.h>
+#include <string.h>
 
 
 /* Private includes ----------------------------------------------------------*/
@@ -75,7 +77,8 @@ uint16_t read_potentiometer(void);
 
 uint16_t moving_average_filter(uint16_t new_value);
 uint16_t adc_buffer[FILTER_WINDOW_SIZE] = {0};  // Buffer to store ADC readings
-uint8_t buffer_index = 0;                       // Index to keep track of current sample
+uint8_t buffer_index = 0;                    // Index to keep track of current sample
+uint32_t pot_value = 0; 
 
 
 uint32_t adc_to_millivolts(uint16_t adc_value);
@@ -131,6 +134,8 @@ int main(void)
   {
     /* USER CODE END WHILE */
 // Read the potentiometer value
+        HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+
         uint16_t pot_value = read_potentiometer();
 
         // Apply moving average filter to smooth the ADC reading
@@ -142,24 +147,17 @@ int main(void)
         // Set the servo position based on the mapped pulse width
         set_servo_position(servo_pulse_width);
 
-        HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
-
-         // Every second, calculate the voltage and send it over UART
-        static uint32_t last_time = 0;
-        if (HAL_GetTick() - last_time >= 1000)
-        {
-          last_time = HAL_GetTick();
-
-            // Convert the filtered ADC value to millivolts
-          uint32_t voltage = adc_to_millivolts(filtered_value);
-
-            // Send the voltage over UART
-          send_voltage_over_uart(voltage);
-
-            
-        }
+        uint32_t voltage = adc_to_millivolts(filtered_value);
       
-        HAL_Delay(10);  // Small delay for stability
+        static uint32_t last_time = 0;
+    if (HAL_GetTick() - last_time >= 1000)
+    {
+        last_time = HAL_GetTick();
+        
+        send_voltage_over_uart(voltage);
+    }
+
+    HAL_Delay(10);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -231,8 +229,12 @@ void set_servo_position(uint16_t pulse_width)
 // Function to read the potentiometer value using ADC
 uint16_t read_potentiometer(void)
 {
+    HAL_ADC_Start(&hadc1);
     HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);  // Wait for ADC conversion
-    return HAL_ADC_GetValue(&hadc1);  // Get ADC value (0-4095)
+    HAL_ADC_GetValue(&hadc1);  // Get ADC value (0-4095)
+    uint16_t pot_value = HAL_ADC_GetValue(&hadc1);
+    HAL_ADC_Stop(&hadc1);
+    return pot_value;
 }
 
 // Function to implement a moving average filter
@@ -261,14 +263,64 @@ uint32_t adc_to_millivolts(uint16_t adc_value)
     return (uint32_t)(adc_value * 3300 / 4095);
 }
 
+void uint32_to_str(uint32_t num, char* str) {
+    char temp[12];  // Временный буфер для числа (максимум 10 цифр для uint32_t + знак конца строки)
+    int i = 0;
+
+    // Обработка числа
+    do {
+        temp[i++] = (num % 10) + '0';  // Берем последнюю цифру числа и превращаем ее в символ
+        num /= 10;  // Убираем последнюю цифру
+    } while (num > 0);
+
+    // Развернем строку, так как цифры в temp идут в обратном порядке
+    int j = 0;
+    while (i > 0) {
+        str[j++] = temp[--i];  // Копируем цифры в правильном порядке
+    }
+
+    str[j] = ' ';  // Завершаем строку нулевым символом
+}
+
 // Function to send voltage over UART in millivolts
 void send_voltage_over_uart(uint32_t voltage)
 {
-    char buffer[50];
-    int len = snprintf(buffer, sizeof(buffer), "ADC Voltage: %lu mV\r\n", voltage);
+
+  
+  char buffer[50] = "Voltage: ";  
+  char endstr[4] =  "mV\n\0";
+  char num[12];
+
+  uint32_to_str(voltage, num);
+  
+  strcat(buffer, num);
+  strcat(buffer, endstr);
+
+  HAL_UART_Transmit(&huart2, (uint8_t *)buffer, sizeof(buffer) - 1, 1000);
+
+
+    /*char buffer[50];  // Make sure this is large enough
+    int len = snprintf(buffer, sizeof(buffer), "ADC Voltage: %lu mV\r\n", voltage);*/
+    // Debug: Check if snprintf is working
+     //HAL_UART_Transmit(&huart2, (uint8_t *)"Entering send_voltage_over_uart\r\n", 34, 1000);
+    /*if (len < 0)
+    {
+        // Handle snprintf error
+        char *error_msg = "snprintf error\r\n";
+        HAL_UART_Transmit(&huart2, (uint8_t *)error_msg, strlen(error_msg), 1000);
+        return;
+    }
+
+    if (len >= sizeof(buffer))
+    {
+        // Output was truncated; adjust len to avoid sending garbage
+        len = sizeof(buffer) - 1;
+    }
 
     // Send the formatted string over UART
-    HAL_UART_Transmit(&huart2, (uint8_t *)buffer, len, HAL_MAX_DELAY);
+    HAL_UART_Transmit(&huart2, (uint8_t *)buffer, len, 1000);*/
+    // Debug: Confirm successful transmission
+    //HAL_UART_Transmit(&huart2, (uint8_t *)"Exiting send_voltage_over_uart\r\n", 32, 1000);
 }
 
 

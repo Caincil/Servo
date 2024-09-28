@@ -45,4 +45,7 @@ CMakeFiles/Servo.elf.dir/Core/Src/main.c.obj: \
  /usr/lib/gcc/arm-none-eabi/13.2.1/include/stdarg.h \
  /usr/include/newlib/sys/reent.h /usr/include/newlib/_ansi.h \
  /usr/include/newlib/sys/_types.h /usr/include/newlib/machine/_types.h \
- /usr/include/newlib/sys/lock.h /usr/include/newlib/sys/stdio.h
+ /usr/include/newlib/sys/lock.h /usr/include/newlib/sys/stdio.h \
+ /usr/include/newlib/inttypes.h /usr/include/newlib/sys/_intsup.h \
+ /usr/include/newlib/sys/_locale.h /usr/include/newlib/string.h \
+ /usr/include/newlib/strings.h /usr/include/newlib/sys/string.h
