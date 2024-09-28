@@ -25,6 +25,7 @@
 #include "gpio.h"
 #include <stdio.h>
 
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -113,8 +114,8 @@ int main(void)
   MX_GPIO_Init();
   MX_DMA_Init();
   MX_TIM2_Init();
-  MX_USART2_UART_Init();
   MX_ADC1_Init();
+  MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
   // Start PWM on channel 1 of TIM2 (PA0)
@@ -129,12 +130,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
-    char message[] = "Hello from Nucleo!\r\n";
-    HAL_UART_Transmit(&huart2, (uint8_t *)message, strlen(message), 1000);  // Use 1 second timeout
-    HAL_Delay(1000);  // Send message every second
-    /*
-        // Read the potentiometer value
+// Read the potentiometer value
         uint16_t pot_value = read_potentiometer();
 
         // Apply moving average filter to smooth the ADC reading
@@ -162,7 +158,6 @@ int main(void)
         }
       
         HAL_Delay(10);  // Small delay for stability
-        */
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
