@@ -142,6 +142,8 @@ int main(void)
         // Set the servo position based on the mapped pulse width
         set_servo_position(servo_pulse_width);
 
+        HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+
          // Every second, calculate the voltage and send it over UART
         static uint32_t last_time = 0;
         if (HAL_GetTick() - last_time >= 1000)
